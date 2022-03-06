@@ -188,6 +188,7 @@ CPU AUTH RY-345-AX3            SYSCOMP STATUS  ALL PORTS ACTIVE
     clear
     sleep 0.5
     wopr "GREETINGS PROFESSOR FALKEN." ""
+    espeak-ng "GREETINGS PROFESSOR FALKEN." 
     prompt=
     while true ; do
 	a="$(readline)"
@@ -196,6 +197,7 @@ CPU AUTH RY-345-AX3            SYSCOMP STATUS  ALL PORTS ACTIVE
 	    Hello* | hello*)
 		actual_d "Hello."
 		wopr "" "HOW ARE YOU FEELING TODAY?" ""
+		espeak-ng "HOW ARE YOU FEELING TODAY?"
 		;;
 	    *fine* | *"ow are you"* )
                 actual_d "I'm fine. How are you?"
@@ -203,18 +205,22 @@ CPU AUTH RY-345-AX3            SYSCOMP STATUS  ALL PORTS ACTIVE
                      "EXCELLENT.  IT'S BEEN A LONG TIME.  CAN YOU EXPLAIN" \
 		     "THE REMOVAL OF YOUR USER ACCOUNT NUMBER ON 6/23/73?" \
 		     ""
+		espeak-ng "EXCELLENT.  IT'S BEEN A LONG TIME.  CAN YOU EXPLAIN THE REMOVAL OF YOUR USER ACCOUNT NUMBER ON THE 23RD OF JUNE NINETEENSEVENTYTHREE?"     
 		;;
 	    *mistak*)
 		actual_d "People sometimes make mistakes." # mistak
 		wopr "" "YES THEY DO.  SHALL WE PLAY A GAME?" ""
+		espeak-ng "YES THEY DO.  SHALL WE PLAY A GAME?"
 		;;
 	    *love* | *war\?* | *war)
 	        actual_d "Love to. How about Global Thermonuclear War?"
 	        wopr "" "WOULDN'T YOU PREFER A GOOD GAME OF CHESS?" ""
+			espeak-ng "WOULDN'T YOU PREFER A GOOD GAME OF CHESS?"
 		;;
 	    *later* | *war. )
 		actual_d "Later. Lets play Global Thermonuclear War."
 		wopr -n "" "FINE"
+		espeak-ng "FINE"
 		phase=gtn
 		return
 		;;
