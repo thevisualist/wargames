@@ -240,7 +240,7 @@ CPU AUTH RY-345-AX3            SYSCOMP STATUS  ALL PORTS ACTIVE
 		wopr "ALTHOUGH PRIMARY GOAL HAS NOT YET" \
 		     "BEEN ACHIEVED, SOLUTION IS NEAR." \
 		     ""
-		espeak-ng wopr "ALTHOUGH PRIMARY GOAL HAS NOT YET BEEN ACHIEVED, SOLUTION IS NEAR."     
+		espeak-ng "ALTHOUGH PRIMARY GOAL HAS NOT YET BEEN ACHIEVED, SOLUTION IS NEAR."     
 		;;
 	    *goal* | "What is"* | "what is"* )
                 actual_d "What is the primary goal?"
