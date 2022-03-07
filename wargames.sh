@@ -232,12 +232,15 @@ CPU AUTH RY-345-AX3            SYSCOMP STATUS  ALL PORTS ACTIVE
 	    *dead*)
 	        actual_d "Falken is dead."
 		wopr "" "I'M SORRY TO HEAR THAT, PROFESSOR." ""
+		espeak-ng "I'M SORRY TO HEAR THAT, PROFESSOR."
 		sleep 1
 		wopr "YESTERDAY'S GAME WAS INTERRUPTED." ""
+		espeak-ng "YESTERDAY'S GAME WAS INTERRUPTED."
 		sleep 1
 		wopr "ALTHOUGH PRIMARY GOAL HAS NOT YET" \
 		     "BEEN ACHIEVED, SOLUTION IS NEAR." \
 		     ""
+		espeak-ng wopr "ALTHOUGH PRIMARY GOAL HAS NOT YET BEEN ACHIEVED, SOLUTION IS NEAR."     
 		;;
 	    *goal* | "What is"* | "what is"* )
                 actual_d "What is the primary goal?"
@@ -246,9 +249,11 @@ CPU AUTH RY-345-AX3            SYSCOMP STATUS  ALL PORTS ACTIVE
 		    wopr "" "YOU SHOULD KNOW PROFESSOR" \
 		         "YOU PROGRAMMED ME." \
 			 ""
+			 espeak-ng "YOU SHOULD KNOW PROFESSOR YOU PROGRAMMED ME."
 		else
 		    goal=1
 		    wopr "" "TO WIN THE GAME." ""
+		    espeak-ng "TO WIN THE GAME."
 		    logout
 		    return
 		fi
